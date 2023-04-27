@@ -25,21 +25,60 @@ body {
   max-width: 1200px; }
 
 .testimonial-card {
-  padding: 2rem;
-  border: solid #cfcfcf;
-  border-radius: 11px; }
+  padding: 3rem;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; }
   .testimonial-card:first-child {
     grid-column: 1 / 3;
     background-color: #7541c8; }
-  .testimonial-card:nth-child(2), .testimonial-card:nth-child(4) {
+  .testimonial-card:nth-child(2) {
     background-color: #48556a; }
+    .testimonial-card:nth-child(2) .avatar {
+      border-width: 2px;
+      border-color: #7541c8; }
   .testimonial-card:first-child, .testimonial-card:nth-child(2), .testimonial-card:nth-child(4) {
     color: white; }
   .testimonial-card:last-child {
     grid-column: -2 / -1;
     grid-row: -3 / -1; }
   .testimonial-card:nth-child(3), .testimonial-card:last-child {
-    background-color: #fafafa; }
+    background-color: #fafafa;
+    color: #48556a; }
+    .testimonial-card:nth-child(3) .review, .testimonial-card:last-child .review {
+      color: black; }
   .testimonial-card:nth-child(4) {
     grid-column: -4 / -2;
     background-color: #19212e; }
+  .testimonial-card__header {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center; }
+    .testimonial-card__header__img-wrapper .avatar {
+      display: block;
+      max-width: 3.6rem;
+      border-radius: 100px;
+      border: 2px solid #cfcfcf; }
+    .testimonial-card__header__info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem; }
+      .testimonial-card__header__info .name {
+        font-size: 1.2rem;
+        font-weight: 500; }
+      .testimonial-card__header__info .verified {
+        font-size: 1.1rem;
+        color: #cfcfcf; }
+  .testimonial-card__body__highlighted {
+    font-size: 1.8rem;
+    margin-bottom: 1.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.5px; }
+  .testimonial-card__body__review {
+    color: #cfcfcf;
+    font-size: 1.4rem;
+    line-height: 1.6; }
+  .testimonial-card__body__review--light {
+    color: #48556a; }
